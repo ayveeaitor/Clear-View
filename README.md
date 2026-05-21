@@ -20,11 +20,26 @@ Requires Python 3 and a local Tor service listening on the default SOCKS5 port (
 * start tor:
   * run `sudo tor` in a separate terminal.
 
+* install Python
+* arch: `sudo pacman -S python`
+* arch: `debian/ubuntu: sudo apt install python`
+
+
+---
+
+
 ## ⬢ 2. proxy execution
 
 Clone the repository and spin up the proxy:
+git clone https://github.com/ayveeaitor/Clear-View
+cd Clear-View
+python3 ClearView.py
 
-3. browser configuration
+
+---
+
+ 
+## ◈ 3. browser configuration
 Route your traffic through the proxy using one of these methods:
 
 [ optional ] foxy proxy addon
