@@ -13,7 +13,7 @@ Built entirely with standard Python libraries. No external dependencies.
 
 * **Live Telemetry:** Real-time stream of HTTP/HTTPS requests with Tor exit node IPs and Geo-Location tracking.
 * **Bandwidth Monitor:** Live Upload and Download speed tracking in the terminal HUD.
-* **Stealth Mode:** Automatically strips identifying proxy headers and spoofs your User-Agent to prevent browser fingerprinting.
+* **Fingerprint evasion:** Automatically strips identifying proxy headers and spoofs your User-Agent to prevent browser fingerprinting.
 * **Hardened Security:** Blocks local network (RFC1918) leaks to prevent de-anonymization.
 
 ---
