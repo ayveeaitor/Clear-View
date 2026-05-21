@@ -2,10 +2,19 @@
 ```
 # C L E A R   V I E W   v 2
 
-> A minimalist local proxy that routes web traffic through Tor.
-> Streams network requests directly to your terminal.
+> A stealth local proxy that routes web traffic through Tor.
+> Streams network requests, exit node locations, and live bandwidth directly to your terminal.
 
-Built entirely with standard Python libraries.
+Built entirely with standard Python libraries. No external dependencies.
+
+---
+
+## ✦ features
+
+* **Live Telemetry:** Real-time stream of HTTP/HTTPS requests with Tor exit node IPs and Geo-Location tracking.
+* **Bandwidth Monitor:** Live Upload and Download speed tracking in the terminal HUD.
+* **Stealth Mode:** Automatically strips identifying proxy headers and spoofs your User-Agent to prevent browser fingerprinting.
+* **Hardened Security:** Blocks local network (RFC1918) leaks to prevent de-anonymization.
 
 ---
 
@@ -20,48 +29,16 @@ Requires Python 3 and a local Tor service listening on the default SOCKS5 port (
 * start tor:
   * run `sudo tor` in a separate terminal.
 
-* install Python
-* arch: `sudo pacman -S python`
-* arch: `debian/ubuntu: sudo apt install python`
-
+* install python:
+  * arch: `sudo pacman -S python`
+  * debian/ubuntu: `sudo apt install python3`
 
 ---
-
 
 ## ⬢ 2. proxy execution
 
 Clone the repository and spin up the proxy:
-git clone https://github.com/ayveeaitor/Clear-View
+```bash
+git clone [https://github.com/ayveeaitor/Clear-View](https://github.com/ayveeaitor/Clear-View)
 cd Clear-View
-python3 ClearView.py
-
-
----
-
- 
-## ◈ 3. browser configuration
-Route your traffic through the proxy using one of these methods:
-
-[ optional ] foxy proxy addon
-the quickest way to toggle the proxy on and off.
-
-install the foxyproxy extension for your browser.
-
-open options and add a new proxy profile.
-
-set proxy type to HTTP.
-
-set ip address to 127.0.0.1 and port to 8080 (or your custom port).
-
-click the extension icon and select your new profile to activate.
-
-[ standard ] manual browser settings
-if you prefer not to use extensions.
-
-open your browser's network or proxy settings.
-
-select "manual proxy configuration".
-
-set the HTTP proxy to 127.0.0.1 and port to 8080.
-
-check the box that says "Also use this proxy for HTTPS" (or manually enter the same ip and port for HTTPS/SSL).```
+python3 ClearView.py```
