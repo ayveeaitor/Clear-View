@@ -1,8 +1,6 @@
-# Clear-View
-```
-# C L E A R   V I E W   v 2
+```# C L E A R   V I E W   v 2
 
-> A stealth local proxy that routes web traffic through Tor.
+> A stealth local proxy that routes web traffic through Tor.  
 > Streams network requests, exit node locations, and live bandwidth directly to your terminal.
 
 Built entirely with standard Python libraries. No external dependencies.
@@ -11,16 +9,22 @@ Built entirely with standard Python libraries. No external dependencies.
 
 ## ✦ features
 
-* **Live Telemetry:** Real-time stream of HTTP/HTTPS requests with Tor exit node IPs and Geo-Location tracking.
-* **Bandwidth Monitor:** Live Upload and Download speed tracking in the terminal HUD.
-* **Fingerprint evasion:** Automatically strips identifying proxy headers and spoofs your User-Agent to prevent browser fingerprinting.
-* **Hardened Security:** Blocks local network (RFC1918) leaks to prevent de-anonymization.
+* Live telemetry — see requests flowing in real time with the Tor exit IP and quick geo info.  
+* Bandwidth HUD — upload/download speeds right in your terminal.  
+* Fingerprint evasion — strips common proxy headers and spoofs the User-Agent.  
+* Blocks LAN leaks — stops RFC1918 addresses from leaking out.  
+* Quiet the noise — simple filters for hosts/methods/status codes.  
+* Rate limiting — optional per-client limits so your local machine doesn’t flood the proxy.  
+* Handles HTTPS — tunnels CONNECT through Tor like it should.  
+* Faster geo lookups — caches exit-node locations so the HUD stays snappy.  
+* UA rotation — small pool of User-Agents to mix things up.  
+* HUD shortcuts — keyboard keys to toggle sections, clear screen, or dump stats.
 
 ---
 
 ## ◈ 1. system setup
 
-Requires Python 3 and a local Tor service listening on the default SOCKS5 port (`127.0.0.1:9050`).
+Requires Python 3 and Tor on SOCKS5 (`127.0.0.1:9050`).
 
 * install tor:
   * arch: `sudo pacman -S tor`
@@ -37,8 +41,7 @@ Requires Python 3 and a local Tor service listening on the default SOCKS5 port (
 
 ## ⬢ 2. proxy execution
 
-Clone the repository and spin up the proxy:
-```bash
-git clone [https://github.com/ayveeaitor/Clear-View](https://github.com/ayveeaitor/Clear-View)
+Clone and run:
+git clone https://github.com/ayveeaitor/Clear-View
 cd Clear-View
 python3 ClearView.py```
