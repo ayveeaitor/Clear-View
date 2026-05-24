@@ -1,4 +1,5 @@
-```C L E A R   V I E W   v 2
+```
+C L E A R   V I E W   v 2
 
 > A stealth local proxy that routes web traffic through Tor.  
 > Streams network requests, exit node locations, and live bandwidth directly to your terminal.
